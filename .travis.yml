@@ -17,12 +17,6 @@ cache:
 
 script: "./gradlew clean build"
 
-# CI 실행 완료 시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - azurealstn@naver.com
-
 before_deploy:
   - zip -r my-webservice *
   - mkdir -p deploy
@@ -40,3 +34,23 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: my-springboot-build-zip
+    key: my-webservice.zip
+
+    bundle_type: zip
+    application: my-springboot2-webservice
+
+    deployment_group: my-springboot2-webservice-group
+
+    region: ap-northeast-2
+    wait-until-deployed: true
+
+# CI 실행 완료 시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - azurealstn@naver.com

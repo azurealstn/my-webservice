@@ -67,6 +67,6 @@ ps -ef | grep java
 
 등록 화면
 
-[##_Image|kage@bevgnu/btqHLYOBe3y/GRSJIlpJ5InzlKd01yl3N0/img.png|alignCenter|data-origin-width="0" data-origin-height="0" data-ke-mobilestyle="widthContent"|||_##]
+(https://user-images.githubusercontent.com/55525868/92077473-78589e00-edf7-11ea-9a65-18524d7a45e2.PNG)
 
 수정 화면

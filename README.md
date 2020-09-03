@@ -59,11 +59,11 @@ ps -ef | grep java
 
 ## 결과 페이지
 
-[##_Image|kage@cdE14a/btqHWwbGL4i/GprSzkgWgPdx1cEaWXH7X1/img.png|alignCenter|data-origin-width="0" data-origin-height="0" data-ke-mobilestyle="widthContent"|||_##]
+![캡처](https://user-images.githubusercontent.com/55525868/92077770-0765b600-edf8-11ea-8f8f-2ead62f143f2.PNG)
 
 메인 화면
 
-[##_Image|kage@PBNwH/btqHR6q81bB/KaaOmTyaHzKpZk39lvmKy0/img.png|alignCenter|data-origin-width="0" data-origin-height="0" data-ke-mobilestyle="widthContent"|||_##]
+![캡처1](https://user-images.githubusercontent.com/55525868/92077777-0896e300-edf8-11ea-8945-98b9750ffc3c.PNG)
 
 등록 화면
 

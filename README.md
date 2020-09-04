@@ -72,3 +72,8 @@ ps -ef | grep java
 ![캡처](https://user-images.githubusercontent.com/55525868/92077473-78589e00-edf7-11ea-9a65-18524d7a45e2.PNG)
 
 수정 화면
+
+---
+
+저의 블로그입니다.
+https://azurealstn.tistory.com/

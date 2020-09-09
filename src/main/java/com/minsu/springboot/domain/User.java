@@ -25,6 +25,7 @@ public class User {
     @Column
     private String picture;
 
+    // 문자열로 저장될 수 있도록 선언
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;

@@ -5,6 +5,9 @@ import com.minsu.springboot.web.dto.PostsResponseDto;
 import com.minsu.springboot.web.dto.PostsSaveRequestDto;
 import com.minsu.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 // @RequiredArgsConstructor: final이 선언된 모든 필드를 인자값으로 하는 생성자를 생성

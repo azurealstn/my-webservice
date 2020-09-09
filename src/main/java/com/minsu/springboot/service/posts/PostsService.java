@@ -7,6 +7,9 @@ import com.minsu.springboot.web.dto.PostsResponseDto;
 import com.minsu.springboot.web.dto.PostsSaveRequestDto;
 import com.minsu.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -41,9 +44,11 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
 
+    // (readOnly = true): 트랜잭션의 범위는 유지, 조회 기능만 남겨두어 조회 속도 개선
     @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {
         return postsRepository.findAllDesc().stream()
+                // postsRepository 결과로 넘어온 Posts의 Stream을 map을 통해 변환후 List 반환
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
@@ -55,4 +60,5 @@ public class PostsService {
 
         postsRepository.delete(posts);
     }
+
 }

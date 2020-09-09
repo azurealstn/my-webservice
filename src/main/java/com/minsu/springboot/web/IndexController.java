@@ -5,6 +5,8 @@ import com.minsu.springboot.config.auth.dto.SessionUser;
 import com.minsu.springboot.service.posts.PostsService;
 import com.minsu.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,4 +41,5 @@ public class IndexController {
         model.addAttribute("post", dto);
         return "posts-update";
     }
+
 }

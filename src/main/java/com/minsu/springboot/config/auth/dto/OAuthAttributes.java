@@ -7,6 +7,9 @@ import lombok.Getter;
 
 import java.util.Map;
 
+/**
+ * OAuth2UserService를 통해 가져온 OAuth2User의 attribute를 담을 클래스
+ */
 @Getter
 public class OAuthAttributes {
     private Map<String, Object> attributes;
@@ -54,6 +57,8 @@ public class OAuthAttributes {
                 .build();
     }
 
+    // 엔티티를 생성하는 시점은 처음 가입할 때
+    // 가입할 때의 기본 권한을 GUEST로 주기 위해 role 빌더값에 Role.GUEST 사용
     public User toEntity() {
         return User.builder()
                 .name(name)

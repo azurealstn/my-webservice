@@ -7,13 +7,10 @@
 
 - intellij (Community 버전)
 - Spring Boot 2.1.7
-- java 1.8
-- junit4
-- JPA
-- MariaDB 10.4
-- AWS EC2
+- Java 1.8
+- Gradle 4.10.2
 
-## 기능
+## 게시판 기능
 - 포스팅
 	- Create
 	- Read
@@ -22,7 +19,18 @@
 - 회원
 	- 구글 & 네이버 로그인
 	- 로그인한 사용자에게 글 작성 권한
-	- 로그아웃
+	- 본인 작성 글에 대한 권한 관리
+	
+### 등록/수정/조회 API
+총 3개의 클래스 필요
+
+- Request 데이터를 받을 Dto
+- API 요청을 받을 Controller
+- 트랜잭션, 도메인 기능 간의 순서를 보장하는 Service
+
+### JPA Auditing으로 생성시간/수정시간 자동화
+
+- [BaseTimeClass](https://github.com/azurealstn/my-webservice/blob/master/src/main/java/com/minsu/springboot/domain/BaseTimeEntity.java)
 
 ## 배포
 - AWS

@@ -9,6 +9,11 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
+/**
+ * JPA Auditing으로 생성시간/수정시간 자동화
+ * @MappedSuperclass: JPA Entity 클래스들이 BaseTimeEntity을 상속할 경우 필드들도 칼럼으로 인식
+ * @EntityListeners: Auditing 기능 포함
+ */
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)

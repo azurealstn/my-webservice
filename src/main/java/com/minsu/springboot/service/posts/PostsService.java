@@ -13,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Service에서 비즈니스 로직을 처리하는 것이 아닌, 트랜잭션, 도메인 간 순서 보장의 역할을 해야합니다.
+ */
 @RequiredArgsConstructor
 @Service
 public class PostsService {

@@ -7,6 +7,7 @@ import com.minsu.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+// @RequiredArgsConstructor: final이 선언된 모든 필드를 인자값으로 하는 생성자를 생성
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {

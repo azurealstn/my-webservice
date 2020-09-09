@@ -33,6 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest {
 
+    // 랜덤으로 포트 생성
     @LocalServerPort
     private int port;
 

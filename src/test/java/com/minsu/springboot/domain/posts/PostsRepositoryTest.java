@@ -19,6 +19,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
+    // 테스트간 데이터 침범을 막기 위해 사용
     @After
     public void cleanup() {
         postsRepository.deleteAll();
@@ -29,12 +30,14 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
+        // 테이블 posts에 insert/update 쿼리를 실행
         postsRepository.save(Posts.builder()
                                 .title(title)
                                 .content(content)
                                 .author("azurealstn@naver.com")
                                 .build());
 
+        // 테이블 posts에 있는 모든 데이터를 조회
         List<Posts> postsList = postsRepository.findAll();
 
         Posts posts = postsList.get(0);

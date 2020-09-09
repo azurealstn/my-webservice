@@ -21,6 +21,6 @@ public class IndexControllerTest {
     public void 메인페이지_로딩() {
         String body = this.restTemplate.getForObject("/", String.class);
 
-        assertThat(body).contains("Admin Community");
+        assertThat(body).contains("게시판 목록");
     }
 }
